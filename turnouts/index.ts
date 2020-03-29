@@ -1,13 +1,13 @@
 import zstPuTurnouts from "@app/consts/objects/zst/pu/turnouts";
+import {LocoNetDefinition} from "@app/consts/interfaces";
 
-export interface TurnoutDefinition {
+export interface TurnoutDefinition extends LocoNetDefinition{
     name: string;
-    locoNetId: number;
     sector?: number;
+    home: RequestedTurnoutPosition;
 }
 
 export interface TurnoutSchemeDefinition extends TurnoutDefinition {
-    home: RequestedTurnoutPosition;
     SVGData: {
         x: number;
         y: number;
@@ -17,7 +17,7 @@ export interface TurnoutSchemeDefinition extends TurnoutDefinition {
 }
 
 const turnouts = {
-    ...zstPuTurnouts
+    ...zstPuTurnouts,
 };
 
 export type RequestedTurnoutPosition = -1 | 1;
