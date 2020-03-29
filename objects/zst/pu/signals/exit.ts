@@ -6,7 +6,6 @@ const exitSignalsL: SignalBuffer = {
         name: 'L1',
         locoNetId: 3,
         type: signalTypes.TYPE_EXIT,
-
         lights: ['HZ', 'Z', 'C', 'B', 'DZ'],
     },
 
@@ -14,14 +13,12 @@ const exitSignalsL: SignalBuffer = {
         name: 'L2',
         locoNetId: 4,
         type: signalTypes.TYPE_EXIT,
-
         lights: ['HZ', 'Z', 'C', 'B', 'DZ'],
     },
     'zst.pu.L3a': {
         name: 'L3a',
         locoNetId: 5,
         type: signalTypes.TYPE_EXIT,
-
         lights: ['Z', 'C', 'B', 'DZ'],
     },
 
@@ -29,7 +26,6 @@ const exitSignalsL: SignalBuffer = {
         name: 'L4',
         locoNetId: 6,
         type: signalTypes.TYPE_EXIT,
-
         lights: ['HZ', 'Z', 'C', 'B', 'DZ'],
     },
 
@@ -37,7 +33,6 @@ const exitSignalsL: SignalBuffer = {
         name: 'L6',
         locoNetId: 7,
         type: signalTypes.TYPE_EXIT,
-
         lights: ['HZ', 'Z', 'C', 'B', 'DZ'],
     },
 
@@ -45,7 +40,6 @@ const exitSignalsL: SignalBuffer = {
         name: 'L8',
         locoNetId: 8,
         type: signalTypes.TYPE_EXIT,
-
         lights: ['HZ', 'Z', 'C', 'B', 'DZ'],
     },
 
@@ -53,7 +47,6 @@ const exitSignalsL: SignalBuffer = {
         name: 'L10',
         locoNetId: 9,
         type: signalTypes.TYPE_EXIT,
-
         lights: ['HZ', 'Z', 'C', 'B', 'DZ'],
     },
 
@@ -61,7 +54,6 @@ const exitSignalsL: SignalBuffer = {
         name: 'L12',
         locoNetId: 10,
         type: signalTypes.TYPE_EXIT,
-
         lights: ['HZ', 'Z', 'C', 'B', 'DZ'],
     },
 
@@ -69,7 +61,6 @@ const exitSignalsL: SignalBuffer = {
         name: 'L14a',
         locoNetId: 11,
         type: signalTypes.TYPE_EXIT,
-
         lights: ['HZ', 'Z', 'C', 'B', 'DZ'],
     },
 };
@@ -78,7 +69,6 @@ const exitSignalsS: SignalBuffer = {
         name: 'S1',
         locoNetId: 26,
         type: signalTypes.TYPE_EXIT,
-
         lights: ['HZ', 'Z', 'C', 'B', 'DZ'],
     },
 
@@ -86,7 +76,6 @@ const exitSignalsS: SignalBuffer = {
         name: 'S2',
         locoNetId: 27,
         type: signalTypes.TYPE_EXIT,
-
         lights: ['HZ', 'Z', 'C', 'B', 'DZ'],
     },
 
@@ -94,7 +83,6 @@ const exitSignalsS: SignalBuffer = {
         name: 'S3',
         locoNetId: 28,
         type: signalTypes.TYPE_EXIT,
-
         lights: ['HZ', 'Z', 'C', 'B', 'DZ'],
     },
 
@@ -148,4 +136,4 @@ const exitSignalsS: SignalBuffer = {
     },
 };
 
-export default {...exitSignalsL, exitSignalsS};
+export default {...exitSignalsL, ...exitSignalsS};
