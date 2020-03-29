@@ -1,4 +1,3 @@
-import {SignalTypeDefinition} from "@app/consts/signals/interfaces";
 import zstPuTurnouts from "@app/consts/objects/zst/pu/turnouts";
 
 export interface TurnoutDefinition {
@@ -16,6 +15,7 @@ export interface TurnoutSchemeDefinition extends TurnoutDefinition {
         dir: 'L' | 'P';
     };
 }
+
 const turnouts = {
     ...zstPuTurnouts
 };
@@ -28,7 +28,7 @@ export function getTurnoutDefinition(key: string): TurnoutDefinition {
     return turnouts[key];
 }
 
-export function getAllTurnouts(): SignalTypeDefinition[] {
+export function getAllTurnouts(): TurnoutDefinition[] {
     const turnoutsArray = [];
     for (const index in turnouts) {
         if (turnouts.hasOwnProperty(index)) {
