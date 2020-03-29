@@ -135,5 +135,5 @@ const exitSignalsS: SignalBuffer = {
         lights: ['HZ', 'Z', 'C', 'B', 'DZ'],
     },
 };
-
-export default {...exitSignalsL, ...exitSignalsS};
+const signals: SignalBuffer = {...exitSignalsL, ...exitSignalsS}
+export default signals;

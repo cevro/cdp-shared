@@ -1,7 +1,7 @@
 import {signalTypes} from "@app/consts/signals/signalTypes";
 import {SignalBuffer} from "@app/consts/signals/interfaces";
 
-const pathSignalsL: SignalBuffer = {
+const pathSignals: SignalBuffer = {
     'zst.pu.Lc3': {
         name: 'Lc3',
         locoNetId: 106,
@@ -24,9 +24,6 @@ const pathSignalsL: SignalBuffer = {
 
         lights: ['HZ', 'C', 'B', 'X', 'DZ'],
     },
-};
-
-const pathSignalsS: SignalBuffer = {
     'zst.pu.Sc3a': {
         name: 'Sc3a',
         locoNetId: 24,
@@ -44,4 +41,4 @@ const pathSignalsS: SignalBuffer = {
     },
 };
 
-export default {...pathSignalsL, pathSignalsS};
+export default pathSignals;
