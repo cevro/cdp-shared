@@ -1,13 +1,18 @@
-import { ENTITY_SECTOR, ENTITY_SIGNAL, ENTITY_TURNOUT } from 'app/consts/entity';
-import { BackendSector, BackendSignal, BackendTurnout } from 'app/consts/interfaces';
+import { BackendSignal } from './interfaces/signal';
+import { BackendTurnout } from './interfaces/turnout';
+import { BackendSector } from './interfaces/sector';
+
+export type MapObjects<T> = {
+    [id in string]: T;
+};
 
 export interface WebSocketStateUpdateMessage {
-    data: {
-        [ENTITY_SIGNAL]?: BackendSignal.Snapshot[]
-        [ENTITY_SECTOR]?: BackendSector.Snapshot[],
-        [ENTITY_TURNOUT]?: BackendTurnout.Snapshot[],
-        // routeBuilder: routeBuilder.dumpBuffer(),
-        // [ENTITY_AB_SECTOR]: autoBlockSectorFactory.dump(),
-        // [ENTITY_BI_DIR_AB]: biDirAutoBlockFactory.dump(),
-    }
+    store: BackendStore;
+}
+
+export interface BackendStore {
+    signals: MapObjects<BackendSignal.Definition>;
+    turnouts: MapObjects<BackendTurnout.Definition>;
+    sectors: MapObjects<BackendSector.Definition>;
+    routeBuilder: { buffer: any[] };
 }
